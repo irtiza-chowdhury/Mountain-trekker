@@ -1,0 +1,51 @@
+@mixin primary-heading{
+    font-size: 44px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    @media (max-width:767.98px){
+        font-size: 28px;
+    }
+    @media (max-width:591.98px){
+        font-size: 24px;
+    }
+}
+@mixin secondary-heading{
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    @media (max-width:767.98px){
+        font-size: 28px;
+    }
+    @media (max-width:591.98px){
+        font-size: 24px;
+    }
+}
+@mixin section-heading{
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    @media (max-width:767.98px){
+        font-size: 24px;
+    }
+    @media (max-width:591.98px){
+        font-size: 20px;
+    }
+}
+@mixin primary-parageraph{
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    @media (max-width:767.98px){
+        font-size: 18px;
+    }
+}
+@mixin secondary-parageraph{
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+@mixin small-parageraph{
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}

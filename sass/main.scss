@@ -1,0 +1,78 @@
+// config_scss
+@import "config/reset";
+@import "config/variable";
+@import "config/layout";
+
+
+// other scss
+@import "other/header";
+@import "other/program";
+@import "other/challenge";
+@import "other/team";
+@import "other/review";
+@import "other/footer";
+@import "other/banner";
+
+// utilities scss
+@import "utilities/utilities";
+@import "utilities/fonts";
+
+// common
+@font-face {
+    font-family:Neurial Grotesk;
+    src: url("../../assets/fonts/NeurialGrotesk-Regular.otf");
+}
+body{
+    font-family: Oswald !important;
+}
+
+// Heeder--Area
+
+
+
+// .challenge{
+//     // background-image: url("../asset/img/himalaya_3.jpg");
+   
+// }
+
+// Team Araa
+
+// .team{
+//     // position: absolute;
+//     // top: 1860px;
+//     // left: 0px;
+//     // width: 1079px;
+    
+//         // background-image: url("../asset/img/himalayabg_7.jpg");
+//         // background-size: cover;
+//         // width: 600px;
+//         // margin: 0;
+//         // height: 800px;
+//         // position: relative;
+//         // z-index: 1;
+       
+    
+    
+// }
+
+// Review_Area
+.review{
+        background: url("../asset/img/himalaya_final4.jpg");
+        background-size: cover;
+        position: relative;
+        clip-path: polygon(0 11%, 100% 0, 100% 89%, 0 100%);
+        z-index: 1;
+        color: $white;
+        // padding: 0px 0;
+        &::before{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: $overlay-color-1;
+            opacity: 0.8;
+            z-index: -1;
+            content: '';
+        }
+    
+}
+// review area end

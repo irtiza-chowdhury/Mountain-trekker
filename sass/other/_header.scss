@@ -1,0 +1,79 @@
+@import "../config/mixin";
+@import "../config/variable";
+@import "../utilities/utilities";
+@import "../utilities/fonts";
+
+body{
+    font-family: Oswald !important;
+}
+.header{
+    &__navbar{
+        z-index: 3;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 20px;
+        padding: 20px 30px !important ;
+        &-title{
+            color: $white !important;
+            @include primary-heading;
+            text-align: center;
+        }
+        &-content{
+            margin: 0 auto;
+            align-items: flex-end;
+            border-bottom: 1px solid $white ;
+
+            li{ 
+                margin-right: 10px;
+                
+                &:last-child{
+                    margin-right: 0;
+                }
+                a{
+                    color: $white !important;
+                    @include small-parageraph;
+
+                    &:hover{
+                        color: $nutty !important;
+                    }
+                }
+            }
+        }
+    }
+
+    &__offcanvas{
+        &-button{
+            font-size: 24px;
+            color: $white;
+            padding: 0 10px;
+            border-radius: 4px;
+            // padding: 5px;
+            &:hover{
+                border: 1px solid $white;
+            }
+        }
+        &-title{
+            margin-top: 20px;
+            @include section-heading;
+            font-weight: 500;
+        }
+        &-body{
+            margin-top: 20px;
+            &-content{
+                &-item{
+                    @include primary-parageraph;
+                    margin-top: 10px;
+                    padding-left: 10px;
+                    transition: all 0.5s ease-in-out;
+                    &:hover{
+                        background: $off_white;
+                        border-radius: 4px;
+                        // color: $white !important;
+                    }
+                }
+            }
+        }
+    }
+    
+}

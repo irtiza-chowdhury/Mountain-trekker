@@ -1,0 +1,165 @@
+@import '../config/mixin';
+@import '../config/variable';
+
+
+.team{
+    // padding: 50px 0;
+    position: relative;
+    z-index: 1;
+    height: fit-content;
+    // clip-path: polygon(0 0, 100% 13%, 100% 81%, 0% 100%);
+    // &:before{
+    //     position: absolute;
+    //     content: '';
+    //     left: 0;
+    //     top: 0;
+    //     height: 100%;
+    //     width: 100%;
+    //     background: $white;
+    //     opacity: 0.9;
+    //     // z-index: -1;
+    // }
+
+    &__background{
+        position: absolute;
+        height: 128%;
+        width: 100%;
+        content: '';
+        clip-path: polygon(0 0, 100% 8%, 100% 90%, 0% 100%);
+        top: -114px;
+        left: 0;
+        z-index: -1;
+        &:before{
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: $white;
+            opacity: 0.9;
+            z-index: 1;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            object-fit: cover;
+            
+        }
+        
+       
+    }
+    &__queary{
+        padding-top: 70px;
+        @include flexcenter;
+        @include small-parageraph;
+        font-family: Playfair Display;
+        font-style: italic;
+        // opacity: 0.4;
+        color: $black;
+    }
+    &__title{
+        @include flexcenter;
+        @include secondary-heading;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__owl-carousel{
+        width: 85% !important;
+        margin: 0 auto;
+        padding: 40px 0;
+
+        &-image{
+            overflow: hidden !important;
+            height: 300px;
+            width: 300px;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            opacity: 0.3;
+            position: relative;
+            @include flexcenter;
+            margin: 0 auto;
+            transition: all 0.3s ease-in-out;
+            @media (max-width:400.98px){
+                width: 275px;
+                height: 275px;
+            }
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: fill;
+            }
+            &:hover{
+                transform: scale(1.05);
+                opacity: 1;
+                // position: absolute;
+                // width: 260px;
+                // opacity: 1;
+                // top: 0;
+                // left: -19px;
+            }
+        }
+        // button.owl-prev {
+        //     position: absolute;
+        //     left: -25px;
+        //     top: 140px;
+        //     @media (max-width:400.98px){
+        //         top: 128px;
+        //     }
+        //     &:hover{
+        //         background: none !important;
+        //         color: $black !important;
+        //     }
+        // }
+        // button.owl-next {
+        //     position: absolute;
+        //     right: -25px;
+        //     top: 140px;  
+        //     @media (max-width:400.98px){
+        //         top: 128px;
+        //     }
+        //     &:hover{
+        //         background: none !important;
+        //         color: $black !important;
+        //     }
+        // }
+
+        // span{
+        //     font-size: 50px;
+        //     font-weight: 700;
+
+        //     &:hover{
+        //         background-color: transparent !important;
+        //     }
+            
+        // }
+        &-icon{
+            font-size: 30px;
+            font-weight: 700;
+            color: $black !important;
+        }
+    }
+    &__mentor{
+        padding-top: 40px;
+        padding-bottom: 70px;
+        &-name{
+            @include flexcenter;
+            @include section-heading;
+            font-weight: 600;
+            color: $overlay-color-1;
+            // text-shadow: 0 1px 1px black;
+            font-style: italic;
+
+            // font-family: cursive;
+        }
+        &-about{
+            @include flexcenter;
+            width: 40%;
+            margin: 10px auto;
+            // opacity: 0.4;
+            font-size: 13px;
+            text-align: justify;
+            margin-bottom: 50px;
+        }
+    }
+}

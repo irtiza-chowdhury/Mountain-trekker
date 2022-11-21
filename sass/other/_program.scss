@@ -1,0 +1,182 @@
+@import "../config/mixin";
+@import "../config/variable";
+
+.program{
+    padding-top: 50px;
+
+    &__query{
+        @include flexcenter;
+        opacity: 0.8;
+        font-style: italic;
+        @include secondary-parageraph;
+        font-weight: 400;
+        font-family: Playfair Display;
+    }
+
+
+    &__title{
+        @include flexcenter;
+        @include secondary-heading;
+        text-transform: uppercase;
+        font-weight: 700;
+
+    }
+    &__owl-carousel{
+        padding: 40px 0px;
+        width: 90% !important;
+        margin: 0 auto;
+
+        &-image{
+            // overflow: hidden !important;
+            // height: 300px;
+            // width: 300px;
+            // clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            // opacity: 1;
+            // position: relative;
+            // @include flexcenter;
+            // margin: 0 auto;
+            // transition: all 0.4s ease-in-out;
+            
+
+            -webkit-backface-visibility: hidden;
+            overflow: hidden !important;
+            height: 300px;
+            width: 300px;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            // -webkit-clip-path:polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%) !important;
+            opacity: 1;
+            position: relative;
+            @include flexcenter;
+            margin: 0 auto;
+            transition: all 0.3s ease-in-out;
+            @media (max-width:400.98px){
+                width: 275px;
+                height: 275px;
+            }
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: fill;
+            }
+            .description{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                font-weight: 700;                   
+                text-shadow: 1px 2px 2px black;
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
+                background: #08197075;
+                &--wrapper{
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    text-align: center;
+                    color: $white;
+                }
+                &-day{
+                   
+                    
+                    font-size: 25px;
+                    letter-spacing: -2px;
+                    transition: letter-spacing 0.7s linear 0.3s;
+                }
+                &-name{
+                    
+                    font-style: italic;                    
+                    font-size: 20px;
+                    letter-spacing: -2px;
+                    transition: letter-spacing 0.7s linear 0.3s;
+                    white-space: nowrap;
+                }
+            }
+
+            &:hover{
+                transform: scale(1.05);
+                
+
+                .description{
+                    opacity: 1;
+
+                    &-day{
+                        letter-spacing: 5px;                     
+                    }
+                    &-name{
+                       letter-spacing: 2px;
+                    }
+                }
+            }
+        }
+        button.owl-prev {
+            position: absolute;
+            left: -25px;
+            top: 140px;
+            @media (max-width:400.98px){
+                top: 128px;
+            }
+            &:hover{
+                background: none !important;
+                color: $black !important;
+            }
+        }
+        button.owl-next {
+            position: absolute;
+            right: -25px;
+            top: 140px;
+            @media (max-width:400.98px){
+                top: 128px;
+            }
+            &:hover{
+                background: none !important;
+                color: $black !important;
+            }
+        }
+
+        span{
+            font-size: 50px;
+
+            &:hover{
+                background-color: none !important;
+            }
+            
+        }
+    }
+    &__brief{
+        @include flexcenter;
+        // opacity: 0.6;
+        gap: 30px;
+        padding: 20px 70px;
+        @include secondary-parageraph;
+        text-align: justify;
+        transition: all 0.4s ease-in-out;
+        @media(max-width:767.98px){
+            display: block;
+        }
+
+        &-text{
+            padding-right: 10px;
+            border-right: 1px solid $gray;
+            &:last-child{
+            border-right: none;
+            padding-right: none;
+        }
+        @media(max-width:767.98px){
+            width: 100%;
+            border-right: none;
+            padding-right: 0;
+        }
+        }
+        
+        
+
+        &-text--down{
+            margin-top: 145px;
+            @media(max-width:767.98px){
+                width: 100%;
+               margin-top: 10px;
+            }
+        }
+    }
+}

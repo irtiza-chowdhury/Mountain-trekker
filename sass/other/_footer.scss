@@ -1,0 +1,198 @@
+@import "../config/mixin";
+@import "../config/variable";
+@import "../utilities/utilities";
+
+
+.footer{
+    padding: 10px 0 40px 0;
+    &__query{
+        @include flexcenter;
+        @include secondary-parageraph;
+        font-style: italic;
+        font-family: Playfair Display;
+        // opacity: 0.8;
+    }
+    &__title{
+        @include flexcenter;
+        @include secondary-heading;
+        font-weight: 700;
+        text-transform: uppercase; 
+    }
+    &__component{
+        @include flexcenterwrap;
+        gap: 30px;
+        margin: 20px;
+        
+        &-item{
+            &-input{
+                padding: 10px 20px;
+                border-radius: 10px;
+                opacity: 0.5;
+            }
+
+            &-button{
+                @include button;
+                background: $deep_blue;
+                border: none;
+            }
+            @media(max-width:638.98px){
+                width: 70%;
+                margin: 20px auto 0;
+                text-align: center;
+            }
+        }
+        
+    }
+    &__invitation{
+        margin-top: 20px;
+        @include flexcenter;
+        opacity: 0.6;
+        text-transform: uppercase;
+        @include primary-parageraph;
+        font-weight: 500;
+    }
+    &__icons{
+        // padding: 0 10px;
+        @include flexcenter;
+        gap: 30px;
+        margin: 20px 0;
+        position: relative;
+        &::after{
+            position: absolute;
+            bottom: -20px;
+            left: 5%;
+            width: 90%;
+            height: 1px;
+            // margin: auto;
+            content: '';
+            background: $gray;
+        }
+
+        .twitter{
+            @include flexcenter;
+            opacity: 0.5;
+            width: 30px;
+            height: 30px;
+            border: 1px solid rgba($color: #000, $alpha: 0.5);
+            border-radius: 50%;
+            text-decoration: none;
+            color: $black !important;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            transition: all 0.5s ease-in-out;
+            &::before{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                content: '';
+                z-index: -1;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:hover{
+                &::before{
+                    top: 0;
+                    background:#55acee ;
+                }
+                opacity: 1;
+                i{
+                    // background: $deep_blue;
+                    color: $white !important;
+                    transform: rotateY(360deg);
+                    transition: transform 0.7s ease-in-out;
+              
+                  }
+            }
+        }
+        .facebook{
+            @include flexcenter;
+            opacity: 0.5;
+            width: 30px;
+            height: 30px;
+            border: 1px solid rgba($color: #000, $alpha: 0.5);
+            border-radius: 50%;
+            text-decoration: none;
+            color: $black !important;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            transition: all 0.5s ease-in-out;
+            &::before{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                content: '';
+                z-index: -1;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:hover{
+                &::before{
+                    top: 0;
+                    background:#3b5999;
+                }
+                opacity: 1;
+                i{
+                    // background: $deep_blue;
+                    color: $white !important;
+                    transform: rotateY(360deg);
+                    transition: transform 0.7s ease-in-out;
+              
+                  }
+            }
+        }
+        .google{
+            @include flexcenter;
+            opacity: 0.5;
+            width: 30px;
+            height: 30px;
+            border: 1px solid rgba($color: #000, $alpha: 0.5);
+            border-radius: 50%;
+            text-decoration: none;
+            color: $black !important;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            transition: all 0.5s ease-in-out;
+            &::before{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                content: '';
+                z-index: -1;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:hover{
+                &::before{
+                    top: 0;
+                    background:#dd4b39 ;
+                }
+                opacity: 1;
+                i{
+                    // background: $deep_blue;
+                    color: $white !important;
+                    transform: rotateY(360deg);
+                    transition: transform 0.7s ease-in-out;
+              
+                  }
+            }
+        }
+    }
+
+    &__copyright{
+        @include small-parageraph;
+        font-weight: 600;
+        text-align: center;
+        padding: 20px 0 0;
+        opacity: 0.8;
+
+    }
+}

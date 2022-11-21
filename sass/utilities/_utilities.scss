@@ -1,0 +1,47 @@
+@import "../config/variable";
+@import "./fonts";
+
+@mixin button {
+    @include primary-parageraph;
+    border: 1px solid $white;
+    background: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    color: $white;
+    border-radius: 10px;
+    // position: relative;
+    width: fit-content;
+    height: fit-content;
+    transition: all 0.5s ease-in-out;
+    
+
+    &:hover{
+        transition: all 0.5s ease-in-out;
+        background: $black;
+        color: $white;
+        box-shadow: 0 1px 3px 1px #8b8888, 0 3px 5px 2px #929191;
+       
+    }
+    
+}
+
+@mixin  nav-button {
+    .owl-nav{
+        position: absolute;
+        right: 0;
+        top: 0;
+        
+        button{
+            width: 30px;
+            height: 30px;
+            border: none !important;
+            background: $white !important;
+            border-radius: 50% !important;
+
+            &:hover{
+                background: $orange !important;
+                color: $white !important;
+            }
+        } 
+    }
+}
