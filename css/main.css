@@ -608,9 +608,9 @@ body {
     height: 230px;
   }
 }
-@media (max-width: 370.98px) {
+@media (max-width: 400.98px) {
   .team__owl-carousel-image {
-    width: 200px;
+    width: 190px;
     height: 180px;
   }
 }
