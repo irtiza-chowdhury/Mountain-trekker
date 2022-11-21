@@ -151,6 +151,9 @@ body {
   width: 90% !important;
   margin: 0 auto;
 }
+.program__owl-carousel .owl-stage-outer {
+  padding: 10px 0;
+}
 .program__owl-carousel-image {
   -webkit-backface-visibility: hidden;
   overflow: hidden !important;
@@ -224,11 +227,11 @@ body {
 .program__owl-carousel button.owl-prev {
   position: absolute;
   left: -25px;
-  top: 140px;
+  top: 150px;
 }
 @media (max-width: 400.98px) {
   .program__owl-carousel button.owl-prev {
-    top: 128px;
+    top: 138px;
     left: -15px;
   }
 }
@@ -239,11 +242,11 @@ body {
 .program__owl-carousel button.owl-next {
   position: absolute;
   right: -25px;
-  top: 140px;
+  top: 150px;
 }
 @media (max-width: 400.98px) {
   .program__owl-carousel button.owl-next {
-    top: 128px;
+    top: 138px;
     right: -15px;
   }
 }
@@ -578,6 +581,9 @@ body {
   margin: 0 auto;
   padding: 40px 0;
 }
+.team__owl-carousel .carousel-inner {
+  overflow: visible;
+}
 .team__owl-carousel-image {
   overflow: hidden !important;
   height: 350px;
@@ -587,23 +593,25 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  box-shadow: 0 1px 1px 1px #929191, 0 3px 8px 0px #0b1a3c;
   transition: all 0.3s ease-in-out;
 }
-@media (max-width: 630.98px) {
+@media (max-width: 670.98px) {
   .team__owl-carousel-image {
     width: 350px;
-    width: 350px;
+    height: 320px;
   }
 }
-@media (max-width: 530.98px) {
+@media (max-width: 570.98px) {
   .team__owl-carousel-image {
     width: 250px;
-    height: 250px;
+    height: 230px;
   }
 }
 @media (max-width: 370.98px) {
   .team__owl-carousel-image {
     width: 200px;
+    height: 180px;
   }
 }
 .team__owl-carousel-image img {
@@ -615,6 +623,7 @@ body {
 .team__owl-carousel-image:hover {
   transform: scale(1.05);
   opacity: 1;
+  box-shadow: 0 5px 4px 1px #929191, 0 7px 13px 1px #0b1a3c;
 }
 .team__owl-carousel-icon {
   font-size: 30px;

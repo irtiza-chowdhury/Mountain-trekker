@@ -58,26 +58,30 @@
         margin: 0 auto;
         padding: 40px 0;
 
+        .carousel-inner{
+            overflow: visible;
+        }
+
         &-image{
             overflow: hidden !important;
             height: 350px;
             width: 430px;
-            // clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-            // opacity: 0.3;
             position: relative;
             @include flexcenter;
             margin: 0 auto;
+            box-shadow: 0 1px 1px 1px $gray, 0 3px 8px 0px $overlay-color-1;
             transition: all 0.3s ease-in-out;
-            @media (max-width:630.98px){
+            @media (max-width:670.98px){
                 width: 350px;
-                width: 350px;
+                height: 320px;
             }
-            @media (max-width:530.98px){
+            @media (max-width:570.98px){
                 width: 250px;
-                height: 250px;
+                height: 230px;
             }
             @media (max-width:370.98px){
                 width: 200px;
+                height: 180px;
             }
             img{
                 height: 100%;
@@ -87,11 +91,7 @@
             &:hover{
                 transform: scale(1.05);
                 opacity: 1;
-                // position: absolute;
-                // width: 260px;
-                // opacity: 1;
-                // top: 0;
-                // left: -19px;
+                box-shadow: 0 5px 4px 1px $gray, 0  7px 13px 1px $overlay-color-1;
             }
         }
         // button.owl-prev {
