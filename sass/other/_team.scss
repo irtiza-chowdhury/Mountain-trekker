@@ -7,18 +7,6 @@
     position: relative;
     z-index: 1;
     height: fit-content;
-    // clip-path: polygon(0 0, 100% 13%, 100% 81%, 0% 100%);
-    // &:before{
-    //     position: absolute;
-    //     content: '';
-    //     left: 0;
-    //     top: 0;
-    //     height: 100%;
-    //     width: 100%;
-    //     background: $white;
-    //     opacity: 0.9;
-    //     // z-index: -1;
-    // }
 
     &__background{
         position: absolute;
@@ -72,17 +60,24 @@
 
         &-image{
             overflow: hidden !important;
-            height: 300px;
-            width: 300px;
-            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-            opacity: 0.3;
+            height: 350px;
+            width: 430px;
+            // clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            // opacity: 0.3;
             position: relative;
             @include flexcenter;
             margin: 0 auto;
             transition: all 0.3s ease-in-out;
-            @media (max-width:400.98px){
-                width: 275px;
-                height: 275px;
+            @media (max-width:630.98px){
+                width: 350px;
+                width: 350px;
+            }
+            @media (max-width:530.98px){
+                width: 250px;
+                height: 250px;
+            }
+            @media (max-width:370.98px){
+                width: 200px;
             }
             img{
                 height: 100%;

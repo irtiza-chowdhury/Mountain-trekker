@@ -91,7 +91,10 @@
                 height: 130px;
                 @include flexcenter;
                 // gap: 10px;
-                
+                @media (max-width:350.98px){
+                    width: 120px;
+                    height: 120px;
+                }
                 
                 &::before{
                     content: "";
@@ -102,6 +105,11 @@
                     bottom: -13px;
                     left: -12px;
                     border-radius: 50%;
+                    
+                    @media (max-width:350.98px){
+                        bottom: -11px;
+                        left: -11px;
+                    }
                 }
                 &::after{
                     content: "";
@@ -119,10 +127,11 @@
                 font-style: italic;
                 width: 152px;
                 font-family: Playfair Display;
-                // @include flexcenter;
                 text-align: center;
-                // padding-left: 13px;
                 margin-bottom: 90px;
+                @media (max-width:350.98px ){
+                    font-size: 14px;
+                }
             }
         }
     }
